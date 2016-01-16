@@ -1,4 +1,4 @@
-@prefix demoMimic: <#> .
+@prefix demoMimic: <http://demoMimic#> .
 
 # Describe: pt01120. Initialize subjects.
 demoMimic:pt01120	a	demoMimic:patient;
