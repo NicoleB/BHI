@@ -1,6 +1,6 @@
 @prefix demoMimic: <http://nboyle.washington.edu/demoMimic#> .
 
-# Describe patient 01120
+# Describe: pt01120
 demoMimic:pt01120	a	demoMimic:patient;
 	demoMimic:ptID "01120";
 	demoMimic:ptSex	"Male";
@@ -9,19 +9,32 @@ demoMimic:pt01120	a	demoMimic:patient;
 	demoMimic:labEvent	demoMimic:lab50189;
 	demoMimic:labEvent demoMimic:lab50399 .
 
-# Describe lab event 50189
+# Describe: pt01120 > labEvent > lab50189
 demoMimic:lab50189 a demoMimic:labEvent;
-	demoMimic:labID "50189";
+	demoMimic:haslabID "50189";
 	demoMimic:hasTestName "cTropnT";
 	demoMimic:hasFluid "BLOOD";
 	demoMimic:hasCategory "CHEMISTRY";
 	demoMimic:hasChartDateTime "3022-10-05 02:00:00 EST";
+	demoMimic:
 	demoMimic:isLabOf demoMimic:pt01120 . # points to patient 01120
 
-# Describe med event 1385
+# Describe: pt01120 > icu1385
 demoMimic:icu1385 a demoMimic:medEvent;
-	# med event contains multiple 'items'
-	demoMimic:itemID demoMimic:item43;
-	demoMimic:itemID demoMimic:item45 . 
+	demoMimic:hasIcuID	"1385";
+	demoMimic:hasItemID demoMimic:item43;
+	demoMimic:hasItemID demoMimic:item45 .
+
+# Describe: pt01120 > icu1385 > item43
+demoMimic:item43 a demoMimic:medItem;
+	demoMimic:hasDose "26.667";
+	demoMimic:hasUOM "mcgkgmin";
+	demoMimic:solnID	demoMimic:soln13 .
+
+# Describe: soln13
+
+
+
+
 
 # Describe each patient 01120's item43
