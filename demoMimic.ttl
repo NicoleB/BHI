@@ -1,0 +1,17 @@
+@prefix demoMimic: <http://nboyle.washington.edu/demoMimic#> .
+
+demoMimic:pt01120	a	demoMimic:patient;
+	demoMimic:ptID "01120";
+	demoMimic:ptSex	"Male";
+	demoMimic:ptAge "51";
+	demoMimic:ptComplaint "PEA arrest";
+	demoMimic:labEvent lab50189;
+	demoMimic:labEvent lab50399 .
+
+demoMimic:lab50189 a demoMimic:labEvent;
+	demoMimic:labID "50189";
+	demoMimic:hasTestName "cTropnT";
+	demoMimic:hasFluid "BLOOD";
+	demoMimic:hasCategory "CHEMISTRY";
+	demoMimi:hasChartDateTime "3022-10-05 02:00:00 EST";
+	demoMimic:isLabOf demoMimic:pt01120 .
