@@ -29,12 +29,11 @@ demoMimic:icu1385 a demoMimic:medEvent;
 demoMimic:item43 a demoMimic:medItem;
 	demoMimic:hasDose "26.667";
 	demoMimic:hasUOM "mcgkgmin";
-	demoMimic:solnID	demoMimic:soln13 .
+	demoMimic:hasSol	demoMimic:sol13 .
 
-# Describe: soln13
-
-
-
-
-
-# Describe each patient 01120's item43
+# Describe: sol13
+demoMimic:sol13 a demoMimic:solution;
+	demoMimic:hasSolnID	"13";
+	demoMimic:hasSolVol "250";
+	demoMimic:hasSolUnit "ml";
+	demoMimic:hasRoute "IV Drip" .
