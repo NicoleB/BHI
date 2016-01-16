@@ -14,19 +14,28 @@ demoMimic:pt01120	a	demoMimic:patient;
 demoMimic:lab50189 a demoMimic:labEvent;
 	demoMimic:hasLabID "50189";
 	demoMimic:hasTestName "cTropnT";
-	demoMimic:hasFluid "BLOOD";
-	demoMimic:hasCategory "CHEMISTRY";
+	demoMimic:hasFluid "blood";
+	demoMimic:hasCategory "chemistry";
 	demoMimic:hasChartDateTime "2001-11-01 02:00:00 EST";
-	demoMimic:isLabOf demoMimic:pt01120 . # points back to pt01120
+	demoMimic:isLabOf demoMimic:pt01120 . # uniquely points back to pt01120
+
+# Describe: pt01120 > labEvent > lab50399
+demoMimic:lab50399 a demoMimic:labEvent;
+	demoMimic:hasLabID "50399";
+	demoMimic:hasTestName "INR(PT)";
+	demoMimic:hasFluid "blood";
+	demoMimic:hasCategory "hematology";
+	demoMimic:hasChartDateTime "2001-11-01 02:00:00 EST";
+	demoMimic:isLabOf demoMimic:pt01120 . # uniquely points back to pt01120
 
 # Describe: pt01120 > icu1385
-demoMimic:icu1385 a demoMimic:medEvent;
+demoMimic:icu1385 a demoMimic:icuEvent;
 	demoMimic:hasIcuID	"1385";
 	demoMimic:hasItemID demoMimic:item43;
 	demoMimic:hasItemID demoMimic:item45 .
 
 # Describe: pt01120 > icu1385 > item43
-demoMimic:item43 a demoMimic:medItem;
+demoMimic:item43 a demoMimic:item;
 	demoMimic:hasDose "26.667";
 	demoMimic:hasUOM "mcgkgmin";
 	demoMimic:hasSol	demoMimic:sol13 .
@@ -37,14 +46,14 @@ demoMimic:item45 a demoMimic:medItem;
 	demoMimic:hasUOM "Uhr";
 	demoMimic:hasSol	demoMimic:sol18 .
 
-# Describe: sol13
+# Describe: pt01120 > icu1385 > item43 > sol13 
 demoMimic:sol13 a demoMimic:solution;
 	demoMimic:hasSolnID	"13";
 	demoMimic:hasSolVol "250";
 	demoMimic:hasSolUnit "ml";
 	demoMimic:hasRoute "IV Drip" .
 
-# Describe: sol18
+# Describe: pt01120 > icu1385 > item45 > sol18
 demoMimic:sol18 a demoMimic:solution;
 	demoMimic:hasSolnID	"18";
 	demoMimic:hasSolVol "100";
