@@ -15,8 +15,7 @@ demoMimic:lab50189 a demoMimic:labEvent;
 	demoMimic:hasTestName "cTropnT";
 	demoMimic:hasFluid "BLOOD";
 	demoMimic:hasCategory "CHEMISTRY";
-	demoMimic:hasChartDateTime "3022-10-05 02:00:00 EST";
-	demoMimic:
+	demoMimic:hasChartDateTime "2001-11-01 02:00:00 EST";
 	demoMimic:isLabOf demoMimic:pt01120 . # points to patient 01120
 
 # Describe: pt01120 > icu1385
@@ -31,9 +30,22 @@ demoMimic:item43 a demoMimic:medItem;
 	demoMimic:hasUOM "mcgkgmin";
 	demoMimic:hasSol	demoMimic:sol13 .
 
+# Describe: pt01120 > icu1385 > item45
+demoMimic:item45 a demoMimic:medItem;
+	demoMimic:hasDose "2";
+	demoMimic:hasUOM "Uhr";
+	demoMimic:hasSol	demoMimic:sol18 .
+
 # Describe: sol13
 demoMimic:sol13 a demoMimic:solution;
 	demoMimic:hasSolnID	"13";
 	demoMimic:hasSolVol "250";
+	demoMimic:hasSolUnit "ml";
+	demoMimic:hasRoute "IV Drip" .
+
+# Describe: sol18
+demoMimic:sol18 a demoMimic:solution;
+	demoMimic:hasSolnID	"18";
+	demoMimic:hasSolVol "100";
 	demoMimic:hasSolUnit "ml";
 	demoMimic:hasRoute "IV Drip" .
