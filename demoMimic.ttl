@@ -1,7 +1,7 @@
 @prefix demoMimic: <http://nboyle.washington.edu/demoMimic#> .
 
 # Describe: pt01120. Initialize subjects.
-demoMimic:pt01120	a	demoMimic:patient;
+demoMimic:pt01120	a	demoMimic:PATIENT;
 	demoMimic:hasPtID "01120";
 	demoMimic:hasPtSex	"Male";
 	demoMimic:hasPtAge "51";
@@ -11,7 +11,7 @@ demoMimic:pt01120	a	demoMimic:patient;
 	demoMimic:medEvent demoMimic:icu1385 .
 
 # Describe: pt01120 > labEvent > lab50189
-demoMimic:lab50189 a demoMimic:labEvent;
+demoMimic:lab50189 a demoMimic:LAB_EVENT;
 	demoMimic:hasLabID "50189";
 	demoMimic:hasTestName "cTropnT";
 	demoMimic:hasFluid "blood";
@@ -20,7 +20,7 @@ demoMimic:lab50189 a demoMimic:labEvent;
 	demoMimic:isLabOf demoMimic:pt01120 . # uniquely points back to pt01120
 
 # Describe: pt01120 > labEvent > lab50399
-demoMimic:lab50399 a demoMimic:labEvent;
+demoMimic:lab50399 a demoMimic:LAB_EVENT;
 	demoMimic:hasLabID "50399";
 	demoMimic:hasTestName "INR(PT)";
 	demoMimic:hasFluid "blood";
@@ -29,32 +29,32 @@ demoMimic:lab50399 a demoMimic:labEvent;
 	demoMimic:isLabOf demoMimic:pt01120 . # uniquely points back to pt01120
 
 # Describe: pt01120 > icu1385
-demoMimic:icu1385 a demoMimic:icuEvent;
+demoMimic:icu1385 a demoMimic:ICU_EVENT;
 	demoMimic:hasIcuID	"1385";
 	demoMimic:hasItemID demoMimic:item43;
 	demoMimic:hasItemID demoMimic:item45 .
 
 # Describe: pt01120 > icu1385 > item43
-demoMimic:item43 a demoMimic:item;
+demoMimic:item43 a demoMimic:ITEM;
 	demoMimic:hasDose "26.667";
 	demoMimic:hasUOM "mcgkgmin";
 	demoMimic:hasSol	demoMimic:sol13 .
 
 # Describe: pt01120 > icu1385 > item45
-demoMimic:item45 a demoMimic:medItem;
+demoMimic:item45 a demoMimic:MED_ITEM;
 	demoMimic:hasDose "2";
 	demoMimic:hasUOM "Uhr";
 	demoMimic:hasSol	demoMimic:sol18 .
 
 # Describe: pt01120 > icu1385 > item43 > sol13 
-demoMimic:sol13 a demoMimic:solution;
+demoMimic:sol13 a demoMimic:SOLUTION;
 	demoMimic:hasSolnID	"13";
 	demoMimic:hasSolVol "250";
 	demoMimic:hasSolUnit "ml";
 	demoMimic:hasRoute "IV Drip" .
 
 # Describe: pt01120 > icu1385 > item45 > sol18
-demoMimic:sol18 a demoMimic:solution;
+demoMimic:sol18 a demoMimic:SOLUTION;
 	demoMimic:hasSolnID	"18";
 	demoMimic:hasSolVol "100";
 	demoMimic:hasSolUnit "ml";
